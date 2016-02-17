@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Generateur de calculs - Résultat</title>
-    <link rel="stylesheet" type="text/css" href="/css/cerulean-bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/cerulean-bootstrap.min.css">
 
 
 </head>

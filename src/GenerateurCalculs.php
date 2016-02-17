@@ -14,7 +14,7 @@ class GenerateurCalculs
     private $decoration = array();
 
 
-    CONST MAX = 100; // les nombres iront jusqu') 100 maximum
+    CONST MAX = 100; // les nombres iront jusqu'à 100 maximum
 
     public function __construct($n)
     {
@@ -27,7 +27,7 @@ class GenerateurCalculs
 
     }
 
-    // je tire une opération au hasard j'exécute la methode qui crée
+    // je tire une opération au sort j'exécute la methode qui crée
     public function genererOperations($n)
     {
         for ($i = 0; $i < $n; $i++) {
