@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Generateur de calculs - Résultat</title>
-    <link rel="stylesheet" type="text/css" href="css/cerulean-bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/cerulean-bootstrap.min.css">
 
 
 </head>
@@ -20,14 +20,13 @@
 </nav>
 
 
-
-
 <section class="container-fluid">
 
     <div class="row">
         <div class="col-md-offset-2 col-md-8 alert alert-info">
             <h4>Résultat !</h4>
-            <p>Vous avez obtenu <?php echo  $score?> réponses correctes. Voici votre copie corrigée.</p>
+
+            <p>Vous avez obtenu <?php echo $score ?> réponses correctes. Voici votre copie corrigée.</p>
         </div>
     </div>
     <div class="row">
@@ -41,7 +40,7 @@
                 </tr>
                 </thead>
                 <?php
-                foreach ($operations as $operation => $r){
+                foreach ($operations as $operation => $r) {
                     ?>
                     <tr class="<?php echo $decorations[$operation]["classe"]; ?>">
                         <td><?php echo $operation; ?></td>
@@ -53,22 +52,7 @@
 
         </div>
     </div>
-    <!--
-    <?php
-    foreach ($resultats as $operation => $r) {
-        ?>
-        <div class="row">
-            <div class="col-lg-offset-4 col-md-2 alert-danger <?php echo $r["classe"]; ?>">
-                <?php echo $operation;  ?>
-            </div>
-            <div class="col-md-1 <?php echo $r["classe"]; ?>">
-                <?php echo $r["reponse"]; ?>
-            </div>
-            <div class="col-md-1">
-                <?php echo $r["soluce"]; ?>
-            </div>
-        </div>
-    <?php } ?>-->
+
 </section>
 
 

@@ -1,12 +1,13 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: Jeanphi
  * Date: 16-02-16
  * Time: 10:42
  */
-
-class GenerateurCalculs{
+class GenerateurCalculs
+{
 
     private $operateurs = array("addition", "soustraction", "division", "multiplication");
     private $operations = array();
@@ -27,11 +28,12 @@ class GenerateurCalculs{
     }
 
     // je tire une opération au hasard j'exécute la methode qui crée
-    public function genererOperations($n){
+    public function genererOperations($n)
+    {
         for ($i = 0; $i < $n; $i++) {
 
-           $o='add'.ucfirst($this->getOperateurs());
-           $this->$o();
+            $o = 'add' . ucfirst($this->getOperateurs());
+            $this->$o();
 
         }
     }
@@ -92,11 +94,11 @@ class GenerateurCalculs{
     }
 
 
-
-    public function getScore(){
-        $score=0;
-        foreach ($this->decoration as $deco){
-            $score+=$deco['point'];
+    public function getScore()
+    {
+        $score = 0;
+        foreach ($this->decoration as $deco) {
+            $score += $deco['point'];
 
         }
         return $score;
@@ -122,8 +124,6 @@ class GenerateurCalculs{
     {
         $this->decoration = $decoration;
     }
-
-
 
 
 }
