@@ -1,4 +1,5 @@
-*** POO & Frameworks php ***
+** POO & Frameworks php **
+**************************
 
 Classe, méthodes et propriétés
 ==============================
