@@ -6,12 +6,14 @@
  * Time: 10:39
  */
 
-require_once("autoload.php"); // fichier autoload inclus les deux classes, une troisième au cas où
+// fichier autoload inclus les deux classes, une troisième au cas où
+require_once(dirname(__FILE__) . '/autoload.php');
 
-CONST N = 5;
+CONST N = 12;
 
 /** Je test si j'ai une variable $_POST et donc un formulaire
  * si OUI je traite le formulaire*/
+
 if (isset($_POST['envoi'])) {
 
     if (isset($_POST['calculs'])) {
@@ -21,8 +23,6 @@ if (isset($_POST['envoi'])) {
 
         $calculs->updateOperations(OperationSolver::solve($operations));
         // je met a jours les opération avec le couple opération => résultat
-
-        // $calculs->setDecoration(OperationSolver::initialize($operations));
 
         // Je compare les bonnes reponses avec les reponses venant du formulaire
         // si elles correpondent je met la classe au vert et j'ajoute un point

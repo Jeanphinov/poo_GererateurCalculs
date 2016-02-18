@@ -31,10 +31,8 @@ class GenerateurCalculs
     public function genererOperations($n)
     {
         for ($i = 0; $i < $n; $i++) {
-
-            $o = 'add' . ucfirst($this->getOperateurs());
-            $this->$o();
-
+            $methode = 'add' . ucfirst($this->getOperateurs());
+            $this->$methode();
         }
     }
 

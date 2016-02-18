@@ -11,8 +11,7 @@ class OperationSolver
 
     static function calcule($tab)
     {
-        eval('$b=array("$tab"=>' . $tab . ',);');
-        return $b;
+        return eval('return array("$tab"=>' . $tab . ',);');
     }
 
     /** Methode solve() résoud l'operation  et fait calcul=>solution */
@@ -23,7 +22,7 @@ class OperationSolver
         $b = array_map("self::calcule", array_keys($tab), $tab);
 
         foreach ($b as $indice_num => $suite) { // boucle pour enlever l'indice [numerique]
-            foreach ($suite as $ques => $rep) // unefonction php doit exister, pas trouvé
+            foreach ($suite as $ques => $rep) // une fonction php doit exister, pas trouvé
                 $c[$ques] = $rep;
         }
         return $c;

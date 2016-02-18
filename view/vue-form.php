@@ -1,20 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Generateur de calculs</title>
-    <link rel="stylesheet" type="text/css" href="css/cerulean-bootstrap.min.css">
-</head>
-<body>
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <span class="navbar-brand">
-                Un générateur de calculs
-            </span>
-        </div>
-    </div>
-</nav>
+<?php require_once('./base/head.php'); ?>
 
 <div class="container">
     <div class="row">
@@ -31,8 +15,8 @@
 
                             <label for='reponses[<?php echo $oper ?>]'
                                    class="col-sm-2 control-label"> <?php echo $oper . " = " ?> </label>
-                            <div class="col-sm-2"><input type='text' size='2' name='reponses[<?php echo $oper ?>]'
-                                                         id='reponses[<?php echo $oper ?>]' value=''
+                            <div class="col-sm-2"><input type='number' size='2' name='reponses[<?php echo $oper ?>]'
+                                                         id='reponses[<?php echo $oper ?>]' value='0'
                                                          class="form-control"></div>
 
                             <?php
