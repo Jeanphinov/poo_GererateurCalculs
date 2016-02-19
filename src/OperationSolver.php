@@ -11,10 +11,27 @@ class OperationSolver
 
     static function calcule($tab)
     {
-        return eval('return array("$tab"=>' . $tab . ',);');
+    // return eval('return array("$tab"=>' . $tab . ',);');
+
+  if (stristr($tab,"+")){
+    $elt=explode('+',$tab);
+    return array ("$tab"=>$elt[0]+$elt[1]);
+  }
+  elseif (stristr($tab,"-")){
+    $elt=explode('-',$tab);
+    return array ("$tab"=>$elt[0]-$elt[1]);
+  }
+  elseif (stristr($tab,"*")){
+    $elt=explode('*',$tab);
+    return array ("$tab"=>$elt[0]*$elt[1]);
+  }
+  elseif (stristr($tab,"/")){
+    $elt=explode('/',$tab);
+    return array ("$tab"=>$elt[0]/$elt[1]);
+  }
     }
 
-    /** Methode solve() résoud l'operation  et fait calcul=>solution */
+    /** Methode solve() résout l'operation  et fait calcul=>solution */
 
     static function solve($tab)
     {
@@ -47,4 +64,3 @@ class OperationSolver
 
     }
 }
-
