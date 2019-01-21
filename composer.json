@@ -1,0 +1,18 @@
+{
+    "name": "jiphi/poo_gererateur-calculs",
+    "description": "basic - generateur de calculs",
+    "require": {
+        "phpunit/phpunit": "^7.5"
+    },
+    "authors": [
+        {
+            "name": "jphNovitz",
+            "email": "hello@jphnovitz.be"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Generateur\\": "src/"
+        }
+    }
+}

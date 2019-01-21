@@ -6,6 +6,10 @@
  * Date: 16-02-16
  * Time: 10:42
  */
+
+
+namespace Generateur ;
+
 class GenerateurCalculs
 {
 
@@ -36,43 +40,46 @@ class GenerateurCalculs
         }
     }
 
-    private function addAddition()
+    public function addAddition($a = 0, $b = 0)
     {
-        $a = rand(0, self::MAX);
-        $b = rand(0, self::MAX);
-        $a_b = $a . "+" . $b;
-
-        $this->setOperations($a_b);
+//        $a = rand(0, self::MAX);
+//        $b = rand(0, self::MAX);
+        return $a . " + " . $b;
     }
 
-    private function addSoustraction()
+    public function addSoustraction($a = 0, $b = 0)
     {
-        $a = rand(0, self::MAX);
-        $b = rand(0, $a);  // le deuxième nombre ne dois pas être plus grand que le premier - pas de résultat négatif.
-        $a_b = $a . "-" . $b;
-        $this->setOperations($a_b);
+//        $a = rand(0, self::MAX);
+//        $b = rand(0, $a);  // le deuxième nombre ne dois pas être plus grand que le premier - pas de résultat négatif.
+//        $a_b = $a . "-" . $b;
+
+        return $a . " - " . $b;
     }
 
-    private function addDivision()
+    public function addDivision($a = 0, $b = 0)
     {
-        $a = rand(0, self::MAX);
-        $test = false;
-        while ($test == false) {
-
-            $b = rand(1, $a);
-            if ($a % $b == 0) $test = true;
+//        $a = rand(0, self::MAX);
+//        $test = false;
+//        while ($test == false) {
+//
+//            $b = rand(1, $a);
+//            if ($a % $b == 0) $test = true;
+//        }
+        if ($b > $a){
+            return false;
+        } else {
+            return $a . " / " . $b;
         }
 
-        $a_b = $a . "/" . $b;
-        $this->setOperations($a_b);
+//        $this->setOperations($a_b);
     }
 
-    private function addMultiplication()
+    public function addMultiplication($a = 0, $b = 1)
     {
-        $a = rand(0, self::MAX);
-        $b = rand(0, self::MAX / 4);
-        $a_b = $a . "*" . $b;
-        $this->setOperations($a_b);
+//        $a = rand(0, self::MAX);
+//        $b = rand(0, self::MAX / 4);
+        return $a . " * " . $b;
+//        $this->setOperations($a_b);
     }
 
     /**
