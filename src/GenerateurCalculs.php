@@ -25,7 +25,11 @@ class GenerateurCalculs
         $this->genererOperations($n);
     }
 
-    private function getOperateurs()
+    public function getNumber(){
+        return rand(0, self::MAX);
+    }
+
+    public function getOperateurs()
     {
         return $this->operateurs[array_rand($this->operateurs)];
 
@@ -42,44 +46,26 @@ class GenerateurCalculs
 
     public function addAddition($a = 0, $b = 0)
     {
-//        $a = rand(0, self::MAX);
-//        $b = rand(0, self::MAX);
         return $a . " + " . $b;
     }
 
     public function addSoustraction($a = 0, $b = 0)
     {
-//        $a = rand(0, self::MAX);
-//        $b = rand(0, $a);  // le deuxième nombre ne dois pas être plus grand que le premier - pas de résultat négatif.
-//        $a_b = $a . "-" . $b;
-
         return $a . " - " . $b;
     }
 
     public function addDivision($a = 0, $b = 0)
     {
-//        $a = rand(0, self::MAX);
-//        $test = false;
-//        while ($test == false) {
-//
-//            $b = rand(1, $a);
-//            if ($a % $b == 0) $test = true;
-//        }
         if ($b > $a){
             return false;
         } else {
             return $a . " / " . $b;
         }
-
-//        $this->setOperations($a_b);
     }
 
     public function addMultiplication($a = 0, $b = 1)
     {
-//        $a = rand(0, self::MAX);
-//        $b = rand(0, self::MAX / 4);
         return $a . " * " . $b;
-//        $this->setOperations($a_b);
     }
 
     /**
@@ -129,6 +115,5 @@ class GenerateurCalculs
     {
         $this->decoration = $decoration;
     }
-
 
 }

@@ -8,6 +8,16 @@ class GenerateurCalculsTest extends TestCase{
     CONST B = 10;
 
     /** @test */
+    public function TestgetOperateurs(){
+        $this->assertContains((new Generateur\GenerateurCalculs(1))->getOperateurs(), ["addition", "soustraction", "division", "multiplication"]);
+    }
+
+    /** @test */
+    public function TestGetNumber(){
+        $this->assertInternalType('int', (new Generateur\GenerateurCalculs(1))->getNumber());
+    }
+
+    /** @test */
     public function TestaddAddition(){
         $this->assertEquals('5 + 10', (new Generateur\GenerateurCalculs(1))->addAddition(5, 10));
     }
