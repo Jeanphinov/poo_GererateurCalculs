@@ -1,13 +1,17 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Jeanphi
+ * User: jphNovitz
+ *
  * Date: 16-02-16
  * Time: 10:39
  */
 
 // fichier autoload inclus les deux classes, une troisième au cas où
-require_once(dirname(__FILE__) . '/autoload.php');
+use Generateur\GenerateurCalculs;
+
+require __DIR__ . '/vendor/autoload.php';
+
 
 CONST N = 12;
 

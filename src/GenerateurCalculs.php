@@ -29,18 +29,20 @@ class GenerateurCalculs
         return rand(0, self::MAX);
     }
 
-    public function getOperateurs()
+    public function getOperateur()
     {
         return $this->operateurs[array_rand($this->operateurs)];
-
     }
 
     // je tire une opération au sort j'exécute la methode qui crée
     public function genererOperations($n)
     {
         for ($i = 0; $i < $n; $i++) {
-            $methode = 'add' . ucfirst($this->getOperateurs());
-            $this->$methode();
+            $methode = 'add' . ucfirst($this->getOperateur());
+            $number_1 = $this->getNumber();
+            $number_2 = $this->getNumber();
+            if($this->$methode($number_1, $number_2));
+
         }
     }
 
