@@ -37,11 +37,14 @@ class GenerateurCalculs
     // je tire une opération au sort j'exécute la methode qui crée
     public function genererOperations($n)
     {
-        for ($i = 0; $i < $n; $i++) {
+        for ($i = 0; $i < $n; ) {
             $methode = 'add' . ucfirst($this->getOperateur());
             $number_1 = $this->getNumber();
             $number_2 = $this->getNumber();
-            if($this->$methode($number_1, $number_2));
+            if($new = $this->$methode($number_1, $number_2)){
+                $this->addOperation($new);
+                $i++;
+            };
 
         }
     }
@@ -97,12 +100,17 @@ class GenerateurCalculs
         return $score;
     }
 
-    /**
-     * @param array $operations
-     */
-    public function setOperations($operations)
-    {
-        $this->operations[$operations] = null;
+//    /**
+//     * @param array $operations
+//     */
+//    public function setOperations($operations)
+//    {
+//        $this->operations[$operations] = null;
+//    }
+
+    public function addOperation($operation){
+            array_push($this->operations, $operation);
+
     }
 
     public function updateOperations($operations)

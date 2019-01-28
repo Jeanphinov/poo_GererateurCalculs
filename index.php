@@ -3,15 +3,14 @@
  * Created by PhpStorm.
  * User: jphNovitz
  *
- * Date: 16-02-16
- * Time: 10:39
+ * created: 16-02-16
+ * updated: january 2019
  */
 
 // fichier autoload inclus les deux classes, une troisième au cas où
-use Generateur\GenerateurCalculs;
-
 require __DIR__ . '/vendor/autoload.php';
 
+use Generateur\GenerateurCalculs;
 
 CONST N = 12;
 

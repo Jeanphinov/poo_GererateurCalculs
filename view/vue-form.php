@@ -3,23 +3,28 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <form action="index.php" method="POST" class="form-horizontal">
+            <form action="./index.php" method="POST" class="form-horizontal">
                 <fieldset>
                     <legend>Quelques calculs...</legend>
                     <div class="form-group">
 
                         <?php
 
-                        foreach ($operations as $oper => $valeurs) {
-                            ?>
-
+                        foreach ($operations as $n => $oper) {
+                        ?>
                             <label for='reponses[<?php echo $oper ?>]'
-                                   class="col-sm-2 control-label"> <?php echo $oper . " = " ?> </label>
-                            <div class="col-sm-2"><input type='number' size='2' name='reponses[<?php echo $oper ?>]'
-                                                         id='reponses[<?php echo $oper ?>]' value='0'
-                                                         class="form-control"></div>
+                                   class="col-sm-2 control-label">
+                                    <?php echo $oper . " = " ?>
+                            </label>
+                            <div class="col-sm-2">
+                                <input type='number' size='2'
+                                       name='reponses[<?php echo $n ?>]'
+                                       id='reponses[<?php echo $oper ?>]' value='0'
+                                       class="form-control"
+                                />
+                            </div>
 
-                            <?php
+                        <?php
                         }
                         ?>
                     </div>
